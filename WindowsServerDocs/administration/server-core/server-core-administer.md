@@ -141,7 +141,7 @@ Use the following reference information to perform administrative tasks from the
 |Display hops for network connections|**pathping**| 
 |Trace hops for network connections|**tracert**| 
 |Display the configuration of the multicast router|**mrinfo**| 
-|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group="Windows Defender Firewall Remote Management" new enable=yes**| 
+|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group="Microsoft Defender Firewall Remote Management" new enable=yes**| 
  
 
 ### Updates, error reporting, and feedback

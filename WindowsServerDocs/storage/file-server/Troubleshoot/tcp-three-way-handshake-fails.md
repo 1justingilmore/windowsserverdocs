@@ -63,7 +63,7 @@ If Windows Firewall is enabled, enable firewall logging to determine whether it 
 Make sure that the appropriate "File and Printer Sharing (SMB-In)" rules are enabled in **Windows Firewall with Advanced Security** \> **Inbound Rules**.
 
 > [!NOTE]
-> Depending on how your computer is set up, "Windows Firewall" might be called "Windows Defender Firewall."
+> Depending on how your computer is set up, "Windows Firewall" might be called "Microsoft Defender Firewall."
 
 ## Scenario 2
 

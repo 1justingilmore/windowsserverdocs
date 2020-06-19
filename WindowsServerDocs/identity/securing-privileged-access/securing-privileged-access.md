@@ -119,9 +119,9 @@ To lower the exposure time of privileges and increase visibility into their use,
 * For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) capability.
 * For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-deployment-plan) capability.
 
-### 4. Enable Windows Defender Credential Guard
+### 4. Enable Microsoft Defender Credential Guard
 
-Enabling Credential Guard helps to protect NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials. This capability helps to prevent credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket by increasing the difficulty of pivoting in the environment using stolen credentials. Information on how Credential Guard works and how to deploy can be found in the article [Protect derived domain credentials with Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
+Enabling Credential Guard helps to protect NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials. This capability helps to prevent credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket by increasing the difficulty of pivoting in the environment using stolen credentials. Information on how Credential Guard works and how to deploy can be found in the article [Protect derived domain credentials with Microsoft Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
 
 ### 5. Leaked credentials reporting
 

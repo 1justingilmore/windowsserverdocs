@@ -52,7 +52,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 
 - **Configure anti-virus exclusions and options for Hyper-V.**  
 
-    Windows Defender already has [automatic exclusions](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus) configured. For more information about exclusions, see [Recommended antivirus exclusions for Hyper-V hosts](https://support.microsoft.com/kb/3105657). 
+    Microsoft Defender already has [automatic exclusions](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus) configured. For more information about exclusions, see [Recommended antivirus exclusions for Hyper-V hosts](https://support.microsoft.com/kb/3105657). 
 
 - **Don't mount unknown VHDs.** This can expose the host to file system level attacks.
 

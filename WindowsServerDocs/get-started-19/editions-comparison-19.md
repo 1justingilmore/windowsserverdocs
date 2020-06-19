@@ -122,7 +122,7 @@ ms.localizationpriority: medium
 |VM Shielding Tools for Fabric Management|Yes|Yes|
 |WebDAV Redirector|Yes|Yes|
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Windows Defender features|Installed|Installed|
+|Microsoft Defender features|Installed|Installed|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
 |Windows PowerShell|Installed|Installed|

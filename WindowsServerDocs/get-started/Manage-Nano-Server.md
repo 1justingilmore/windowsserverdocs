@@ -185,7 +185,7 @@ $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ApplyApplicableUp
 Restart-Computer  
 ```  
 **Note:**  
-Windows Defender will prevent updates from installing. To work around this, uninstall Windows Defender, install the updates, and then reinstall Windows Defender. Alternately, you can download the updates on another computer, copy them to the Nano Server, and then apply them with DISM.exe.  
+Microsoft Defender will prevent updates from installing. To work around this, uninstall Microsoft Defender, install the updates, and then reinstall Microsoft Defender. Alternately, you can download the updates on another computer, copy them to the Nano Server, and then apply them with DISM.exe.  
 
 
 ### Verify installation of updates  

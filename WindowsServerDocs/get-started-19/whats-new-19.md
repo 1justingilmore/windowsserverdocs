@@ -46,11 +46,11 @@ This optional feature on demand is available on a separate ISO and can be added 
 
 ## Security
 
-### Windows Defender Advanced Threat Protection (ATP)
+### Microsoft Defender Advanced Threat Protection (ATP)
 
 ATP's deep platform sensors and response actions expose memory and kernel level attacks and respond by suppressing malicious files and terminating malicious processes.
 
--   For more information about Windows Defender ATP, see [Overview of Windows
+-   For more information about Microsoft Defender ATP, see [Overview of Windows
     Defender ATP
     capabilities](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview).
 
@@ -58,7 +58,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     Defender ATP
     service](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
 
-**Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling you to balance security risk and productivity requirements.
+**Microsoft Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Microsoft Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling you to balance security risk and productivity requirements.
 
 -   [Attack Surface
     Reduction(ASR)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
@@ -80,7 +80,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
 
-[Windows Defender Application
+[Microsoft Defender Application
 Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
 known as Code Integrity (CI) policy) was released in Windows Server 2016.
 Customer feedback has suggested that it is a great concept, but hard to deploy.
