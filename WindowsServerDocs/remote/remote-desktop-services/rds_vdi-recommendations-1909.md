@@ -106,7 +106,7 @@ The alternative is to use a standard .ISO to install from, possibly using an una
 
 Anytime that Windows defaults are changed, questions arise regarding supportability. Once a VDI image (VM or session) is customized, every change made to the image needs to be tracked in a change log. At troubleshooting, often an image can be isolated in a pool and configured for problem analysis. Once a problem has been tracked to the root cause, that change can then be rolled out to the test environment first, and ultimately to the production workload.
 
-This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service VDI images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in VDI environments, *except for security software updates*. Microsoft has published guidance for Windows Security in VDI environments. For more information, see [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus).
+This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service VDI images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in VDI environments, *except for security software updates*. Microsoft has published guidance for Windows Security in VDI environments. For more information, see [Deployment guide for Microsoft Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus).
 
 Consider supportability when altering default Windows settings. Difficult problems can arise when altering system services, policies, or scheduled tasks, in the name of hardening, “lightening”, etc. Consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub will be maintained with regards to known issues, if any arise. In addition, you can report issues in several ways to Microsoft.
 
@@ -419,7 +419,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Edge UI |  Allow Edge swipe |  | Disabled |
 | Edge UI |  Disable Help tips |  | Enabled |
 | Edge UI | Turn off tracking of app usage |  | Enabled |
-| *File Explorer |  Configure Windows Defender SmartScreen |  | Disabled. SmartScreen will be turned off for all users. Users will not be warned if they try to run suspicious apps from the Internet. NOTE: If not connected to the internet, this will prevent the computers from trying to contact Microsoft for SmartScreen information. |
+| *File Explorer |  Configure Microsoft Defender SmartScreen |  | Disabled. SmartScreen will be turned off for all users. Users will not be warned if they try to run suspicious apps from the Internet. NOTE: If not connected to the internet, this will prevent the computers from trying to contact Microsoft for SmartScreen information. |
 | File Explorer |  Do not show the **new application installed** notification |  | Enabled |
 | *Find my device |  Turn On/Off Find My Device |  | Disabled. When Find My Device is off, the device and its location are not registered and the Find My Device feature will not work. The user will also not be able to view the location of the last use of their active digitizer on their device. |
 | File Explorer | Turn off caching of thumbnail pictures |  | Enabled |
@@ -463,7 +463,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | *Microsoft Edge | Configure Password Manager |  | Disabled. If you disable this setting, employees can't use Password Manager to save their passwords locally. |
 | *Microsoft Edge | Configure search suggestions in Address bar |  | Disabled. Users can't see search suggestions in the Address bar of Microsoft Edge. |
 | *Microsoft Edge | Configure Start pages |  | Enabled. If you enable this setting, you can configure one or more Start pages. If this setting is enabled, you must also include URLs to the pages, separating multiple pages by using angle brackets in this format: <support.contoso.com><support.microsoft.com> Windows 10, version 1703 or later: If you don't want to send traffic to Microsoft, you can use the <about:blank> value, which is honored for devices whether joined to a domain or not, when it's the only configured URL. |
-| *Microsoft Edge | Configure Windows Defender SmartScreen |  | Disabled. Windows Defender SmartScreen is turned off and employees can't turn it on. NOTE: Consider this setting within the environment. If not connected to the Internet, this will prevent the computers from trying to contact Microsoft for SmartScreen information. |
+| *Microsoft Edge | Configure Microsoft Defender SmartScreen |  | Disabled. Microsoft Defender SmartScreen is turned off and employees can't turn it on. NOTE: Consider this setting within the environment. If not connected to the Internet, this will prevent the computers from trying to contact Microsoft for SmartScreen information. |
 | *Microsoft Edge | Prevent the First Run web page from opening on Microsoft Edge |  | Enabled. Users won't see the First Run page when opening Microsoft Edge for the first time. |
 | OneDrive | Prevent OneDrive from generating network traffic until the user signs in to OneDrive |  | Enabled. Enable this setting to prevent the OneDrive sync client (OneDrive.exe) from generating network traffic (checking for updates, etc.) until the user signs in to OneDrive or starts syncing files to the local computer. |
 | *OneDrive | Prevent the usage of OneDrive for file storage |  | Enabled. Unless OneDrive is used on- or off-premises. |
@@ -485,10 +485,10 @@ The following settings were chosen to not counter or conflict with any setting t
 | Store | Turn off the offer to update to the latest version of Windows |  | Enabled |
 |*Sync your settings | Do not sync | Allow users to turn syncing on (not selected) | Enabled. If you enable this policy setting, "sync your settings" will be turned off, and none of the "sync your setting" groups will be synced on this device. |
 | Text Input | Improve inking and typing recognition |  | Disabled |
-| Windows Defender Antivirus \\ MAPS | Join Microsoft MAPS |  | Disabled. If you disable or do not configure this setting, you will not join Microsoft MAPS. |
-| Windows Defender Antivirus \\ MAPS | Send file samples when further analysis is required | Never send | Enabled. Only if not opted-in for MAPS diagnostic data. |
-| Windows Defender Antivirus \\ Reporting | Turn off enhanced notifications |  | Enabled. If you enable this setting, Windows Defender Antivirus enhanced notifications will not display on clients. |
-| Windows Defender Antivirus \\ Signature Updates | Define the order of sources for downloading definition updates | FileShares | Enabled. If you enable this setting, definition update sources will be contacted in the order specified. Once definition updates have been successfully downloaded from one specified source, the remaining sources in the list will not be contacted. |
+| Microsoft Defender Antivirus \\ MAPS | Join Microsoft MAPS |  | Disabled. If you disable or do not configure this setting, you will not join Microsoft MAPS. |
+| Microsoft Defender Antivirus \\ MAPS | Send file samples when further analysis is required | Never send | Enabled. Only if not opted-in for MAPS diagnostic data. |
+| Microsoft Defender Antivirus \\ Reporting | Turn off enhanced notifications |  | Enabled. If you enable this setting, Microsoft Defender Antivirus enhanced notifications will not display on clients. |
+| Microsoft Defender Antivirus \\ Signature Updates | Define the order of sources for downloading definition updates | FileShares | Enabled. If you enable this setting, definition update sources will be contacted in the order specified. Once definition updates have been successfully downloaded from one specified source, the remaining sources in the list will not be contacted. |
 | Windows Error Reporting | Automatically send memory dumps for operating system-generated error reports |  | Disabled |
 | Windows Error Reporting | Disable Windows Error Reporting |  | Enabled |
 | Windows Game Recording and Broadcasting | Enables or disables Windows Game Recording and Broadcasting | | Disabled |
@@ -506,7 +506,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | *Windows Update \\ Windows Update for Business | Select when Preview Builds and Feature Updates are received | Semi-Annual Channel<br>Deferment: 365 days<br>Pause start: yyy-mm-dd. | Enabled. Enable this policy to specify the level of Preview Build or feature updates to receive, and when. |
 | Windows Update \\ Windows Update for Business | Select when Quality Updates are received | 1. 30 days<br>2. Pause quality updates starting yyyy-mm-dd | Enabled |
 | Windows Restricted Traffic Custom Policy Settings | Prevent OneDrive from generating network traffic until the user signs in to OneDrive |  | Enabled. Enable this setting if you would like to prevent the OneDrive sync client (OneDrive.exe) from generating network traffic (checking for updates, etc.) until the user signs in to OneDrive or starts syncing files to the local computer. |
-| Windows Restricted Traffic Custom Policy Settings | Turn off Windows Defender Notifications |	 | Enabled. If you enable this policy setting, Windows Defender will not send notifications with critical information about the health and security of your device. |
+| Windows Restricted Traffic Custom Policy Settings | Turn off Microsoft Defender Notifications |	 | Enabled. If you enable this policy setting, Microsoft Defender will not send notifications with critical information about the health and security of your device. |
 | Local Computer Policy \\ User Configuration \\ Administrative Templates  |  |  |
 |Control Panel \\ Regional and Language Options | Turn off offer text predictions as I type |  | Enabled |
 | Desktop | Do not add shares of recently opened documents to Network Locations |  | Enabled |
@@ -648,7 +648,7 @@ Scheduled Task Name:
 
 ### Apply Windows (and other) updates
 
-Whether from Microsoft Update, or from your internal resources, apply the available updates including Windows Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command [Update-Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/update-help?view=powershell-7).
+Whether from Microsoft Update, or from your internal resources, apply the available updates including Microsoft Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command [Update-Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/update-help?view=powershell-7).
 
 #### Servicing the operating system and apps
 
@@ -658,9 +658,9 @@ At some point during the image optimization process available Windows updates sh
 
 This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
 
-One very important consideration for non-persistent VDI VMs are security updates, including security software definition files. These updates might be released once or more than once per day. There might be a way to retain these updates, including Windows Defender and third-party components.
+One very important consideration for non-persistent VDI VMs are security updates, including security software definition files. These updates might be released once or more than once per day. There might be a way to retain these updates, including Microsoft Defender and third-party components.
 
-For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Additionally, the VM won’t be behind on updates because only the latest available updates will apply. The same might be true for third-party definition files.
+For Microsoft Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Additionally, the VM won’t be behind on updates because only the latest available updates will apply. The same might be true for third-party definition files.
 
 > [!NOTE]
 > Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
@@ -697,11 +697,11 @@ The following are some system traces to consider disabling for VDI use:
 | WiFiSession | |
 | WinPhoneCritical | |
 
-### Windows Defender optimization with VDI
+### Microsoft Defender optimization with VDI
 
-Microsoft has recently published documentation regarding Windows Defender in a VDI environment. See [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for more information.
+Microsoft has recently published documentation regarding Microsoft Defender in a VDI environment. See [Deployment guide for Microsoft Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for more information.
 
-The above article contains procedures to service the ‘gold’ VDI image, and how to maintain the VDI clients as they are running. To reduce network bandwidth when VDI computers need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the VDI virtual machines.
+The above article contains procedures to service the ‘gold’ VDI image, and how to maintain the VDI clients as they are running. To reduce network bandwidth when VDI computers need to update their Microsoft Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Microsoft Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the VDI virtual machines.
 
 ### Client network performance tuning by registry settings
 

@@ -88,7 +88,7 @@ Remote Credential Guard helps you protect your credentials over a Remote Desktop
 This 5-minute video demos Credential Guard and Remote Credential Guard.         
 
 ## Hardening the OS and applications
-### [Windows Defender Application Control (WDAC) Deployment Guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+### [Microsoft Defender Application Control (WDAC) Deployment Guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
 WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.
 
 ### [Device Guard demo video](https://www.youtube.com/watch?v=F-pTkesjkhI)
@@ -100,8 +100,8 @@ Supported registry setting information for the Windows implementation of the Tra
 ### [Control Flow Guard](https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard)
 Control Flow Guard provides built-in protection against some classes of memory corruption attacks.
 
-### [Windows Defender](https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
-Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.
+### [Microsoft Defender](https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
+Microsoft Defender provides active detection capabilities to block known malware. Microsoft Defender is turned on by default and is optimized to support the various server roles in Windows Server.
 
 ## Detecting and Responding to Threats
 ### [Security Threat Analysis Using Microsoft Operations Management Suite](https://channel9.msdn.com/events/ignite/2015/brk3464)
@@ -139,4 +139,4 @@ Compliance is an important aspect of security features. We leave the expert advi
 
 -   [Credential Guard compliance mapping whitepaper](https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf)
 
--   [Windows Defender compliance mapping whitepaper](https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf)
+-   [Microsoft Defender compliance mapping whitepaper](https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf)

@@ -163,7 +163,7 @@ Windows Server security provides layers of protection built into the operating s
                     <div class="cardText">
                         <h3>Hardening the OS and applications</h3>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Microsoft Defender Application Control (WDAC) Deployment Guide</a></h3>WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard demo video</a></h3>Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.</p>
 <HR />
@@ -171,7 +171,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard">Control Flow Guard</a></h3>Control Flow Guard provides built-in protection against some classes of memory corruption attacks.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Windows Defender</a></h3>Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
+                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server">Microsoft Defender</a></h3>Microsoft Defender provides active detection capabilities to block known malware. Microsoft Defender is turned on by default and is optimized to support the various server roles in Windows Server.</p>
                     </div>
                 </div>
             </div>
@@ -291,7 +291,7 @@ Windows Server security provides layers of protection built into the operating s
 <HR />
                         <p><a href="https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf">Credential Guard compliance mapping whitepaper</a></p>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf">Windows Defender compliance mapping whitepaper</a></p>
+                        <p><a href="https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf">Microsoft Defender compliance mapping whitepaper</a></p>
 <HR />
                     </div>
                 </div>

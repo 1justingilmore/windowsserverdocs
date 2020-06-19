@@ -112,7 +112,7 @@ manager: dongill
 3.  In the list of computers, right-click the computer that you want to remove from the network, and then click **Remove the computer**.  
   
 ##  <a name="BKMK_5"></a> Configure Group Policy settings for folder redirection and security  
- You can configure Group Policy and deploy it to computers in the Windows Server Essentials network by using the Windows Server Essentials Dashboard. Group Policy in Windows Server Essentials includes settings for folder redirection and security that impact Windows Update, Windows Defender, and the network firewall.  
+ You can configure Group Policy and deploy it to computers in the Windows Server Essentials network by using the Windows Server Essentials Dashboard. Group Policy in Windows Server Essentials includes settings for folder redirection and security that impact Windows Update, Microsoft Defender, and the network firewall.  
   
 #### To configure Group Policy in Windows Server Essentials  
   

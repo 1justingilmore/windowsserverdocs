@@ -44,7 +44,7 @@ In addition to features that are new in Windows Server version 1809, the followi
 * [Storage Migration Service (SMS)](../storage/whats-new-in-storage.md#storage-spaces-direct)
 * Storage Replica
 * System Insights 
-* Windows Defender Advanced Threat Protection (ATP)
-* Windows Defender ATP Exploit Guard
+* Microsoft Defender Advanced Threat Protection (ATP)
+* Microsoft Defender ATP Exploit Guard
 * [Windows Time Service](https://docs.microsoft.com/windows-server/networking/windows-time-service/insider-preview)
 

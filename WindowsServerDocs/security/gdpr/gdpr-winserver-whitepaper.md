@@ -188,12 +188,12 @@ As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsof
 
 An important design consideration for Windows Server was mitigating credential theft—in particular, derived credentials. Credential Guard provides significantly improved security against derived credential theft and reuse by implementing a significant architectural change in Windows designed to help eliminate hardware-based isolation attacks rather than simply trying to defend against them.
 
-While using Windows Defender Credential Guard, NTLM, and Kerberos derived credentials are protected using virtualization-based security, the credential theft attack techniques and tools used in many targeted attacks are blocked. Malware running in the operating system with administrative privileges cannot extract secrets that are protected by virtualization-based security. While Windows Defender Credential Guard is a powerful mitigation, persistent threat attacks will likely shift to new attack techniques and you should also incorporate Device Guard, as described below, along with other security strategies and architectures.
+While using Microsoft Defender Credential Guard, NTLM, and Kerberos derived credentials are protected using virtualization-based security, the credential theft attack techniques and tools used in many targeted attacks are blocked. Malware running in the operating system with administrative privileges cannot extract secrets that are protected by virtualization-based security. While Microsoft Defender Credential Guard is a powerful mitigation, persistent threat attacks will likely shift to new attack techniques and you should also incorporate Device Guard, as described below, along with other security strategies and architectures.
 
-#### Windows Defender Credential Guard
-Windows Defender Credential Guard uses virtualization-based security to isolate credential information, preventing password hashes or Kerberos tickets from being intercepted. It uses an entirely new isolated Local Security Authority (LSA) process, which is not accessible to the rest of the operating system. All binaries used by the isolated LSA are signed with certificates that are validated before launching them in the protected environment, making Pass-the-Hash type attacks completely ineffective.
+#### Microsoft Defender Credential Guard
+Microsoft Defender Credential Guard uses virtualization-based security to isolate credential information, preventing password hashes or Kerberos tickets from being intercepted. It uses an entirely new isolated Local Security Authority (LSA) process, which is not accessible to the rest of the operating system. All binaries used by the isolated LSA are signed with certificates that are validated before launching them in the protected environment, making Pass-the-Hash type attacks completely ineffective.
 
-Windows Defender Credential Guard uses:
+Microsoft Defender Credential Guard uses:
 
 - Virtualization-based security (required). Also required:
 
@@ -207,12 +207,12 @@ Windows Defender Credential Guard uses:
 
 - TPM 2.0 either discrete or firmware (preferred - provides binding to hardware)
 
-You can use Windows Defender Credential Guard to help protect privileged identities by protecting the credentials and credential derivatives on Windows Server 2016. For more information on Windows Defender Credential Guard requirements, see [Protect derived domain credentials with Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).
+You can use Microsoft Defender Credential Guard to help protect privileged identities by protecting the credentials and credential derivatives on Windows Server 2016. For more information on Microsoft Defender Credential Guard requirements, see [Protect derived domain credentials with Microsoft Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).
 
-#### Windows Defender Remote Credential Guard
-Windows Defender Remote Credential Guard on Windows Server 2016 and Windows 10 Anniversary Update also helps protect credentials for users with remote desktop connections. Previously, anyone using Remote Desktop Services would have to log on to their local machine and then be required to log on again when they performed a remote connection to their target machine. This second login would pass credentials to the target machine, exposing them to Pass-the-Hash or Pass-the-Ticket attacks.
+#### Microsoft Defender Remote Credential Guard
+Microsoft Defender Remote Credential Guard on Windows Server 2016 and Windows 10 Anniversary Update also helps protect credentials for users with remote desktop connections. Previously, anyone using Remote Desktop Services would have to log on to their local machine and then be required to log on again when they performed a remote connection to their target machine. This second login would pass credentials to the target machine, exposing them to Pass-the-Hash or Pass-the-Ticket attacks.
 
-With Windows Defender Remote Credential Guard, Windows Server 2016 implements single sign-on for Remote Desktop sessions, eliminating the requirement to re-enter your username and password. Instead, it leverages the credentials that you've already used to log on to your local machine. To use Windows Defender Remote Credential Guard, the Remote Desktop client and server must meet the following requirements:
+With Microsoft Defender Remote Credential Guard, Windows Server 2016 implements single sign-on for Remote Desktop sessions, eliminating the requirement to re-enter your username and password. Instead, it leverages the credentials that you've already used to log on to your local machine. To use Microsoft Defender Remote Credential Guard, the Remote Desktop client and server must meet the following requirements:
 
 - Must be joined to an Active Directory domain and be in the same domain or a domain with a trust relationship.
 
@@ -220,17 +220,17 @@ With Windows Defender Remote Credential Guard, Windows Server 2016 implements si
 
 - Must be running at least Windows 10 version 1607 or Windows Server 2016.	
 
-- The Remote Desktop classic Windows app is required. The Remote Desktop Universal Windows Platform app doesn't support Windows Defender Remote Credential Guard.
+- The Remote Desktop classic Windows app is required. The Remote Desktop Universal Windows Platform app doesn't support Microsoft Defender Remote Credential Guard.
 
-You can enable Windows Defender Remote Credential Guard by using a registry setting on the Remote Desktop server and Group Policy or a Remote Desktop Connection parameter on the Remote Desktop client. For more information on enabling Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/access-protection/remote-credential-guard). As with Windows Defender Credential Guard, you can use Windows Defender Remote Credential Guard to help protect privileged identities on Windows Server 2016.
+You can enable Microsoft Defender Remote Credential Guard by using a registry setting on the Remote Desktop server and Group Policy or a Remote Desktop Connection parameter on the Remote Desktop client. For more information on enabling Microsoft Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Microsoft Defender Remote Credential Guard](https://docs.microsoft.com/windows/access-protection/remote-credential-guard). As with Microsoft Defender Credential Guard, you can use Microsoft Defender Remote Credential Guard to help protect privileged identities on Windows Server 2016.
 
 ### Secure the operating system to run your apps and infrastructure
 Preventing cyber threats also requires finding and blocking malware and attacks that seek to gain control by subverting the standard operating practices of your infrastructure. If attackers can get an operating system or application to run in a non-predetermined, non-viable way, they are likely using that system to take malicious actions. Windows Server 2016 provides layers of protection that block external attackers running malicious software or exploiting vulnerabilities. The operating system takes an active role in protecting infrastructure and applications by alerting administrators to activity that indicates a system has been breached.
 
-#### Windows Defender Device Guard
-Windows Server 2016 includes Windows Defender Device Guard to ensure that only trusted software can be run on the server. Using virtualization-based security, it can limit what binaries can run on the system based on the organization's policy. If anything, other than the specified binaries tries to run, Windows Server 2016 blocks it and logs the failed attempt so that administrators can see that there has been a potential breach. Breach notification is a critical part of the requirements for GDPR compliance.
+#### Microsoft Defender Device Guard
+Windows Server 2016 includes Microsoft Defender Device Guard to ensure that only trusted software can be run on the server. Using virtualization-based security, it can limit what binaries can run on the system based on the organization's policy. If anything, other than the specified binaries tries to run, Windows Server 2016 blocks it and logs the failed attempt so that administrators can see that there has been a potential breach. Breach notification is a critical part of the requirements for GDPR compliance.
 
-Windows Defender Device Guard is also integrated with PowerShell so that you can authorize which scripts can run on your system. In earlier versions of Windows Server, administrators could bypass code integrity enforcement by simply deleting the policy from the code file. With Windows Server 2016, you can configure a policy that is signed by your organization so that only a person with access to the certificate that signed the policy can change the policy.
+Microsoft Defender Device Guard is also integrated with PowerShell so that you can authorize which scripts can run on your system. In earlier versions of Windows Server, administrators could bypass code integrity enforcement by simply deleting the policy from the code file. With Windows Server 2016, you can configure a policy that is signed by your organization so that only a person with access to the certificate that signed the policy can change the policy.
 
 #### Control Flow Guard 
 Windows Server 2016 also includes built-in protection against some classes of memory corruption attacks. Patching your servers is important, but there is always a chance that malware could be developed for a vulnerability that has not yet been identified. Some of the most common methods for exploiting these vulnerabilities are to provide unusual or extreme data to a running program. For example, an attacker can exploit a buffer overflow vulnerability by providing more input to a program than expected and overrun the area reserved by the program to hold a response. This can corrupt adjacent memory that might hold a function pointer.
@@ -243,23 +243,23 @@ But because Control Flow Guard can identify whether the application is executing
 
 Developers building applications where personal data will be handled are encouraged to enable Control Flow Guard (CFG) in their applications. This feature is available in Microsoft Visual Studio 2015, and runs on "CFG-Aware" versions of Windows—the x86 and x64 releases for Desktop and Server of Windows 10 and Windows 8.1 Update (KB3000850). You don't have to enable CFG for every part of your code, as a mixture of CFG enabled and non-CFG enabled code will execute fine. But failing to enable CFG for all code can open gaps in the protection. Furthermore, CFG enabled code works fine on "CFG-Unaware" versions of Windows and is therefore fully compatible with them.
 
-#### Windows Defender Antivirus
-Windows Server 2016 includes the industry leading, active detection capabilities of Windows Defender to block known malware. Windows Defender Antivirus (AV) works together with Windows Defender Device Guard and Control Flow Guard to prevent malicious code of any kind from being installed on your servers. It is turned on by default – the administrator does not need to take any action for it to start working. Windows Defender AV is also optimized to support the various server roles in Windows Server 2016. In the past, attackers used shells such as PowerShell to launch malicious binary code. In Windows Server 2016, PowerShell is now integrated with Windows Defender AV to scan for malware before launching the code.
+#### Microsoft Defender Antivirus
+Windows Server 2016 includes the industry leading, active detection capabilities of Microsoft Defender to block known malware. Microsoft Defender Antivirus (AV) works together with Microsoft Defender Device Guard and Control Flow Guard to prevent malicious code of any kind from being installed on your servers. It is turned on by default – the administrator does not need to take any action for it to start working. Microsoft Defender AV is also optimized to support the various server roles in Windows Server 2016. In the past, attackers used shells such as PowerShell to launch malicious binary code. In Windows Server 2016, PowerShell is now integrated with Microsoft Defender AV to scan for malware before launching the code.
 
-Windows Defender AV is a built-in antimalware solution that provides security and antimalware management for desktops, portable computers, and servers. Windows Defender AV has been significantly improved since it was introduced in Windows 8. Windows Defender Antivirus in Windows Server uses a multi-pronged approach to improve antimalware:
+Microsoft Defender AV is a built-in antimalware solution that provides security and antimalware management for desktops, portable computers, and servers. Microsoft Defender AV has been significantly improved since it was introduced in Windows 8. Microsoft Defender Antivirus in Windows Server uses a multi-pronged approach to improve antimalware:
 
 - **Cloud-delivered protection** helps detect and block new malware within seconds, even if the malware has never been seen before.
 
-- **Rich local context** improves how malware is identified. Windows Server informs Windows Defender AV not only about content like files and processes but also where the content came from, where it has been stored, and more. 
+- **Rich local context** improves how malware is identified. Windows Server informs Microsoft Defender AV not only about content like files and processes but also where the content came from, where it has been stored, and more. 
 
-- **Extensive global sensors** help keep Windows Defender AV current and aware of even the newest malware. This is accomplished in two ways: by collecting the rich local context data from end points and by centrally analyzing that data.
+- **Extensive global sensors** help keep Microsoft Defender AV current and aware of even the newest malware. This is accomplished in two ways: by collecting the rich local context data from end points and by centrally analyzing that data.
 
-- **Tamper proofing** helps guard Windows Defender AV itself against malware attacks. For example, Windows Defender AV uses Protected Processes, which prevents untrusted processes from attempting to tamper with Windows Defender AV components, its registry keys, and so on.
+- **Tamper proofing** helps guard Microsoft Defender AV itself against malware attacks. For example, Microsoft Defender AV uses Protected Processes, which prevents untrusted processes from attempting to tamper with Microsoft Defender AV components, its registry keys, and so on.
 
-- **Enterprise-level features** give IT pros the tools and configuration options necessary to make Windows Defender AV an enterprise-class antimalware solution.
+- **Enterprise-level features** give IT pros the tools and configuration options necessary to make Microsoft Defender AV an enterprise-class antimalware solution.
 
 #### Enhanced security auditing 
-Windows Server 2016 actively alerts administrators to potential breach attempts with enhanced security auditing that provides more detailed information, which can be used for faster attack detection and forensic analysis. It logs events from Control Flow Guard, Windows Defender Device Guard, and other security features in one location, making it easier for administrators to determine what systems may be at risk.
+Windows Server 2016 actively alerts administrators to potential breach attempts with enhanced security auditing that provides more detailed information, which can be used for faster attack detection and forensic analysis. It logs events from Control Flow Guard, Microsoft Defender Device Guard, and other security features in one location, making it easier for administrators to determine what systems may be at risk.
 
 New event categories include:
 
@@ -303,7 +303,7 @@ As noted in the Windows Security Center white paper, [Post Breach: Dealing with 
 
 > “_Unlike pre-breach, post-breach assumes a breach has already occurred – acting as a flight recorder and Crime Scene Investigator (CSI). Post-breach provides security teams the information and toolset needed to identify, investigate, and respond to attacks that otherwise will stay undetected and below the radar._”
 
-In this section we will look at how Windows Server can help you meet your GDPR breach notification obligations. This starts with understanding the underlying threat data available to Microsoft that is gathered and analyzed for your benefit and how, through Windows Defender Advanced Threat Protection (ATP), that data can be critical to you.
+In this section we will look at how Windows Server can help you meet your GDPR breach notification obligations. This starts with understanding the underlying threat data available to Microsoft that is gathered and analyzed for your benefit and how, through Microsoft Defender Advanced Threat Protection (ATP), that data can be critical to you.
 
 #### Insightful security diagnostic data
 For nearly two decades, Microsoft has been turning threats into useful intelligence that can help fortify its platform and protect customers. Today, with the immense computing advantages afforded by the cloud, we are finding new ways to use our rich analytics engines driven by threat intelligence to protect our customers.
@@ -315,21 +315,21 @@ By applying a combination of automated and manual processes, machine learning an
 The scope of Microsoft's threat intelligence spans, literally, billions of data points: 35 billion messages scanned monthly, 1 billion customers across enterprise and consumer segments accessing 200+ cloud services, and 14 billion authentications performed daily. All this data is pulled together on your behalf by Microsoft to create the Intelligent Security Graph that can help you protect your front door in a dynamic way to stay secure, remain productive and meet the requirements of the GDPR.
 
 #### Detecting attacks and forensic investigation
-Even the best endpoint defenses may be breached eventually, as cyberattacks become more sophisticated and targeted. Two capabilities can be used to help with potential breach detection - Windows Defender Advanced Threat Protection (ATP) and Microsoft Advanced Threat Analytics (ATA).
+Even the best endpoint defenses may be breached eventually, as cyberattacks become more sophisticated and targeted. Two capabilities can be used to help with potential breach detection - Microsoft Defender Advanced Threat Protection (ATP) and Microsoft Advanced Threat Analytics (ATA).
 
-Windows Defender Advanced Threat Protection (ATP) helps you detect, investigate, and respond to advanced attacks and data breaches on your networks. The types of data breach the GDPR expects you to protect against through technical security measures to ensure the ongoing confidentiality, integrity, and availability of personal data and processing systems.
+Microsoft Defender Advanced Threat Protection (ATP) helps you detect, investigate, and respond to advanced attacks and data breaches on your networks. The types of data breach the GDPR expects you to protect against through technical security measures to ensure the ongoing confidentiality, integrity, and availability of personal data and processing systems.
 
-Among the key benefits of Windows Defender ATP are the following:
+Among the key benefits of Microsoft Defender ATP are the following:
 
 - **Detecting the undetectable.** Sensors built deep into the operating system kernel, Windows security experts, and unique optics from over 1 billion machines and signals across all Microsoft services.
 
 - **Built in, not bolted on.** Agentless, with high performance and minimal impact, cloud-powered; easy management with no deployment. 
 
-- **Single pane of glass for Windows security.** Explore 6 months of rich, machine-timeline, unifying security events from Windows Defender ATP, Windows Defender Antivirus and Windows Defender Device Guard.
+- **Single pane of glass for Windows security.** Explore 6 months of rich, machine-timeline, unifying security events from Microsoft Defender ATP, Microsoft Defender Antivirus and Microsoft Defender Device Guard.
 
 - **Power of the Microsoft graph.** Leverages the Microsoft Intelligence Security Graph to integrate detection and exploration with Office 365 ATP subscription, to track back and respond to attacks.
 
-Read more at [What's new in the Windows Defender ATP Creators Update preview](https://blogs.microsoft.com/microsoftsecure/2017/03/13/whats-new-in-the-windows-defender-atp-creators-update-preview/).
+Read more at [What's new in the Microsoft Defender ATP Creators Update preview](https://blogs.microsoft.com/microsoftsecure/2017/03/13/whats-new-in-the-windows-defender-atp-creators-update-preview/).
 
 ATA is an on-premises product that helps detect identity compromise in an organization. ATA can capture and parse network traffic for authentication, authorization, and information gathering protocols (such as Kerberos, DNS, RPC, NTLM, and other protocols). ATA uses this data to build a behavioral profile about users and other entities on a network so that it can detect anomalies and known attack patterns. The following table lists the attack types detected by ATA.
 
@@ -344,13 +344,13 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 ## Related content for associated Windows Server 2016 solutions
 
-- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10
+- **Microsoft Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10
 
-- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection
+- **Microsoft Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection
 
-- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide
+- **Microsoft Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide
 
-- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
+- **Microsoft Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
 
 - **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
 

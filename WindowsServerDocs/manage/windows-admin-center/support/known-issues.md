@@ -81,7 +81,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ## Role Based Access Control (RBAC)
 
-- RBAC deployment will not succeed on machines that are configured to use Windows Defender Application Control (WDAC, formerly known as Code Integrity.) [16568455]
+- RBAC deployment will not succeed on machines that are configured to use Microsoft Defender Application Control (WDAC, formerly known as Code Integrity.) [16568455]
 
 - To use RBAC in a cluster, you must deploy the configuration to each member node individually.
 

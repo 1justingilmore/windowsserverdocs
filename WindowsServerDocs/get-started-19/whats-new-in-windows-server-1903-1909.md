@@ -91,7 +91,7 @@ This functionality requires the server to be using the Server Core installation 
 
 ## Microsoft Defender Advanced Threat Protection (ATP) improvements
 
-Windows Server includes Microsoft Defender Advanced Thread Protection (for more info, see [Windows Defender Antivirus on Windows Server](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016)). This release includes the following improvements:
+Windows Server includes Microsoft Defender Advanced Thread Protection (for more info, see [Microsoft Defender Antivirus on Windows Server](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016)). This release includes the following improvements:
 
 - [Attack surface area reduction](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview-attack-surface-reduction) – IT admins can configure devices with advanced web protection that enables them to define allow and deny lists for specific URL's and IP addresses.
 - [Next generation protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) – Controls have been extended to protection from ransomware, credential misuse, and attacks that are transmitted through removable storage.

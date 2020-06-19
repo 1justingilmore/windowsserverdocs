@@ -2137,7 +2137,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |||
 
 
-## Windows Defender Network Inspection Service
+## Microsoft Defender Network Inspection Service
 
 |                    |        |
 | ------------------ | ------ |
@@ -2150,7 +2150,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |||
 
 
-## Windows Defender Service
+## Microsoft Defender Service
 
 |                    |        |
 | ------------------ | ------ |

@@ -181,9 +181,9 @@ When the volume status is **Healthy (At Risk)**, an underlying disk's status is 
 
 **Solution:**
 
-1. If the remote computer supports VDS, you can configure Windows Defender Firewall to allow VDS connections. If the remote computer does not support VDS, you can use Remote Desktop Connection to connect to it and then run Disk Management directly on the remote computer.
-2. To manage disks on remote computers that do support VDS, you must configure the Windows Defender Firewall on both the local computer (on which you are running Disk Management) and the remote computer.
-3. On the local computer, configure Windows Defender Firewall to enable the Remote Volume Management Exception.
+1. If the remote computer supports VDS, you can configure Microsoft Defender Firewall to allow VDS connections. If the remote computer does not support VDS, you can use Remote Desktop Connection to connect to it and then run Disk Management directly on the remote computer.
+2. To manage disks on remote computers that do support VDS, you must configure the Microsoft Defender Firewall on both the local computer (on which you are running Disk Management) and the remote computer.
+3. On the local computer, configure Microsoft Defender Firewall to enable the Remote Volume Management Exception.
 
 > [!NOTE]
 > The Remote Volume Management Exception includes exceptions for Vds.exe, Vdsldr.exe, and TCP port 135.

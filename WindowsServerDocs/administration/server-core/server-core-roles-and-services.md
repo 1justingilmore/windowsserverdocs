@@ -215,8 +215,8 @@ The Server Core installation option includes the following features.
 | SNMP WMI Provider                                      | SNMP-WMI-Provider                  | N                     |
 | Telnet Client                                          | Telnet-Client                      | N                     |
 | VM Shielding Tools for Fabric Management               | FabricShieldedTools                | N                     |
-| Windows Defender Features                              | Windows-Defender-Features          | Y                     |
-| Windows Defender                                       | Windows-Defender                   | Y                     |
+| Microsoft Defender Features                              | Microsoft-Defender-Features          | Y                     |
+| Microsoft Defender                                       | Microsoft-Defender                   | Y                     |
 | Windows Internal Database                              | Windows-Internal-Database          | N                     |
 | Windows PowerShell                                     | PowerShellRoot                     | Y                     |
 | Windows PowerShell 5.1                                 | PowerShell                         | Y                     |

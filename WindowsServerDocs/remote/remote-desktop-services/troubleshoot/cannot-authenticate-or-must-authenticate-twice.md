@@ -159,8 +159,8 @@ To resolve this issue, ensure that the computers that the users want to connect 
 
 ## Users are denied access on a deployment that uses Remote Credential Guard with multiple RD Connection Brokers
 
-This issue occurs in high-availability deployments that use two or more Remote Desktop Connection Brokers, if Windows Defender Remote Credential Guard is in use. Users can't sign in to remote desktops.
+This issue occurs in high-availability deployments that use two or more Remote Desktop Connection Brokers, if Microsoft Defender Remote Credential Guard is in use. Users can't sign in to remote desktops.
 
 This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers can't support Kerberos operations.
 
-If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
+If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Microsoft Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Microsoft Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).

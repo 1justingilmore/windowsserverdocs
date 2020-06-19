@@ -76,7 +76,7 @@ Note that some Remote Desktop role services are included in Server Core (Connect
 - TFTP Client (**TFTP-Client**)
 - WebDAV Redirector (**WebDAV-Redirector**)
 - Windows Biometric Framework (**Biometric-Framework**)
-- Windows Defender Features \ GUI for Windows Defender (**Windows-Defender-Gui**)
+- Microsoft Defender Features \ GUI for Microsoft Defender (**Windows-Defender-Gui**)
 - Windows Identity Foundation 3.5 (**Windows-Identity-Foundation**)
 - Windows PowerShell \ Windows PowerShell ISE (**PowerShell-ISE**)
 - Windows Search Service (**Search-Service**)
